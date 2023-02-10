@@ -1,0 +1,89 @@
+﻿@model AspNetScaffoldTest.Data.Models.Vehicle
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Vehicle</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="fldVIN" />
+            <div class="form-group">
+                <label asp-for="fldModelID" class="control-label"></label>
+                <input asp-for="fldModelID" class="form-control" />
+                <span asp-validation-for="fldModelID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fldTypeID" class="control-label"></label>
+                <input asp-for="fldTypeID" class="form-control" />
+                <span asp-validation-for="fldTypeID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fldColourID" class="control-label"></label>
+                <input asp-for="fldColourID" class="form-control" />
+                <span asp-validation-for="fldColourID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fldYear" class="control-label"></label>
+                <input asp-for="fldYear" class="form-control" />
+                <span asp-validation-for="fldYear" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fldOdometer" class="control-label"></label>
+                <input asp-for="fldOdometer" class="form-control" />
+                <span asp-validation-for="fldOdometer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fldPreviousLease" class="control-label"></label>
+                <input asp-for="fldPreviousLease" class="form-control" />
+                <span asp-validation-for="fldPreviousLease" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fldBookValue" class="control-label"></label>
+                <input asp-for="fldBookValue" class="form-control" />
+                <span asp-validation-for="fldBookValue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fldAutomatic" class="control-label"></label>
+                <input asp-for="fldAutomatic" class="form-control" />
+                <span asp-validation-for="fldAutomatic" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fldAir" class="control-label"></label>
+                <input asp-for="fldAir" class="form-control" />
+                <span asp-validation-for="fldAir" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fldPowerLocks" class="control-label"></label>
+                <input asp-for="fldPowerLocks" class="form-control" />
+                <span asp-validation-for="fldPowerLocks" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fldINLot" class="control-label"></label>
+                <input asp-for="fldINLot" class="form-control" />
+                <span asp-validation-for="fldINLot" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fldINGarage" class="control-label"></label>
+                <input asp-for="fldINGarage" class="form-control" />
+                <span asp-validation-for="fldINGarage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

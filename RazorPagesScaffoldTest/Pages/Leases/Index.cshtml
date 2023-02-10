@@ -1,0 +1,108 @@
+﻿@page
+@model AspNetScaffoldTest.RazorPages.Pages.Leases.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Lease[0].fldCustomerID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lease[0].fldVIN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lease[0].fldLeaseTermsID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lease[0].fldBeginOdometer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lease[0].fldContractStartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lease[0].fldPaymentStartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lease[0].fldMonthlyPayment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lease[0].fldNumberOfPayments)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lease[0].fldEndOdometer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lease[0].fldLTRThankYou)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lease[0].fldLTRExpiry)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lease[0].fldLTRTermination)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lease[0].fldTerminationDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Lease) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldCustomerID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldVIN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldLeaseTermsID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldBeginOdometer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldContractStartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldPaymentStartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldMonthlyPayment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldNumberOfPayments)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldEndOdometer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldLTRThankYou)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldLTRExpiry)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldLTRTermination)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldTerminationDate)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.fldLeaseID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.fldLeaseID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.fldLeaseID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

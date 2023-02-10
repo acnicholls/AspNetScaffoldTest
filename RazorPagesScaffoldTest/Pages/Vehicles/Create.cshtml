@@ -1,0 +1,94 @@
+﻿@page
+@model AspNetScaffoldTest.RazorPages.Pages.Vehicles.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Vehicle</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Vehicle.fldVIN" class="control-label"></label>
+                <input asp-for="Vehicle.fldVIN" class="form-control" />
+                <span asp-validation-for="Vehicle.fldVIN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vehicle.fldModelID" class="control-label"></label>
+                <input asp-for="Vehicle.fldModelID" class="form-control" />
+                <span asp-validation-for="Vehicle.fldModelID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vehicle.fldTypeID" class="control-label"></label>
+                <input asp-for="Vehicle.fldTypeID" class="form-control" />
+                <span asp-validation-for="Vehicle.fldTypeID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vehicle.fldColourID" class="control-label"></label>
+                <input asp-for="Vehicle.fldColourID" class="form-control" />
+                <span asp-validation-for="Vehicle.fldColourID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vehicle.fldYear" class="control-label"></label>
+                <input asp-for="Vehicle.fldYear" class="form-control" />
+                <span asp-validation-for="Vehicle.fldYear" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vehicle.fldOdometer" class="control-label"></label>
+                <input asp-for="Vehicle.fldOdometer" class="form-control" />
+                <span asp-validation-for="Vehicle.fldOdometer" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Vehicle.fldPreviousLease" /> @Html.DisplayNameFor(model => model.Vehicle.fldPreviousLease)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vehicle.fldBookValue" class="control-label"></label>
+                <input asp-for="Vehicle.fldBookValue" class="form-control" />
+                <span asp-validation-for="Vehicle.fldBookValue" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Vehicle.fldAutomatic" /> @Html.DisplayNameFor(model => model.Vehicle.fldAutomatic)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Vehicle.fldAir" /> @Html.DisplayNameFor(model => model.Vehicle.fldAir)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Vehicle.fldPowerLocks" /> @Html.DisplayNameFor(model => model.Vehicle.fldPowerLocks)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Vehicle.fldINLot" /> @Html.DisplayNameFor(model => model.Vehicle.fldINLot)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Vehicle.fldINGarage" /> @Html.DisplayNameFor(model => model.Vehicle.fldINGarage)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

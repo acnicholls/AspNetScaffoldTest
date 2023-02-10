@@ -1,0 +1,97 @@
+﻿@page
+@model AspNetScaffoldTest.RazorPages.Pages.Leases.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Lease</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Lease.fldCustomerID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lease.fldCustomerID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Lease.fldVIN)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lease.fldVIN)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Lease.fldLeaseTermsID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lease.fldLeaseTermsID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Lease.fldBeginOdometer)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lease.fldBeginOdometer)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Lease.fldContractStartDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lease.fldContractStartDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Lease.fldPaymentStartDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lease.fldPaymentStartDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Lease.fldMonthlyPayment)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lease.fldMonthlyPayment)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Lease.fldNumberOfPayments)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lease.fldNumberOfPayments)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Lease.fldEndOdometer)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lease.fldEndOdometer)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Lease.fldLTRThankYou)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lease.fldLTRThankYou)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Lease.fldLTRExpiry)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lease.fldLTRExpiry)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Lease.fldLTRTermination)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lease.fldLTRTermination)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Lease.fldTerminationDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lease.fldTerminationDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Lease?.fldLeaseID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

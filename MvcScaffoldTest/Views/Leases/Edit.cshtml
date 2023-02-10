@@ -1,0 +1,94 @@
+﻿@model AspNetScaffoldTest.Data.Models.Lease
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Lease</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="fldLeaseID" />
+            <div class="form-group">
+                <label asp-for="fldCustomerID" class="control-label"></label>
+                <input asp-for="fldCustomerID" class="form-control" />
+                <span asp-validation-for="fldCustomerID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fldVIN" class="control-label"></label>
+                <input asp-for="fldVIN" class="form-control" />
+                <span asp-validation-for="fldVIN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fldLeaseTermsID" class="control-label"></label>
+                <input asp-for="fldLeaseTermsID" class="form-control" />
+                <span asp-validation-for="fldLeaseTermsID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fldBeginOdometer" class="control-label"></label>
+                <input asp-for="fldBeginOdometer" class="form-control" />
+                <span asp-validation-for="fldBeginOdometer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fldContractStartDate" class="control-label"></label>
+                <input asp-for="fldContractStartDate" class="form-control" />
+                <span asp-validation-for="fldContractStartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fldPaymentStartDate" class="control-label"></label>
+                <input asp-for="fldPaymentStartDate" class="form-control" />
+                <span asp-validation-for="fldPaymentStartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fldMonthlyPayment" class="control-label"></label>
+                <input asp-for="fldMonthlyPayment" class="form-control" />
+                <span asp-validation-for="fldMonthlyPayment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fldNumberOfPayments" class="control-label"></label>
+                <input asp-for="fldNumberOfPayments" class="form-control" />
+                <span asp-validation-for="fldNumberOfPayments" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fldEndOdometer" class="control-label"></label>
+                <input asp-for="fldEndOdometer" class="form-control" />
+                <span asp-validation-for="fldEndOdometer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fldLTRThankYou" class="control-label"></label>
+                <input asp-for="fldLTRThankYou" class="form-control" />
+                <span asp-validation-for="fldLTRThankYou" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fldLTRExpiry" class="control-label"></label>
+                <input asp-for="fldLTRExpiry" class="form-control" />
+                <span asp-validation-for="fldLTRExpiry" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fldLTRTermination" class="control-label"></label>
+                <input asp-for="fldLTRTermination" class="form-control" />
+                <span asp-validation-for="fldLTRTermination" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fldTerminationDate" class="control-label"></label>
+                <input asp-for="fldTerminationDate" class="form-control" />
+                <span asp-validation-for="fldTerminationDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

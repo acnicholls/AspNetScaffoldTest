@@ -1,0 +1,96 @@
+﻿@model AspNetScaffoldTest.Data.Models.Lease
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Lease</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fldCustomerID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fldCustomerID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fldVIN)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fldVIN)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fldLeaseTermsID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fldLeaseTermsID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fldBeginOdometer)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fldBeginOdometer)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fldContractStartDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fldContractStartDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fldPaymentStartDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fldPaymentStartDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fldMonthlyPayment)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fldMonthlyPayment)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fldNumberOfPayments)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fldNumberOfPayments)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fldEndOdometer)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fldEndOdometer)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fldLTRThankYou)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fldLTRThankYou)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fldLTRExpiry)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fldLTRExpiry)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fldLTRTermination)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fldLTRTermination)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fldTerminationDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fldTerminationDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.fldLeaseID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

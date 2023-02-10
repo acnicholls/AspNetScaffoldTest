@@ -1,0 +1,102 @@
+﻿@page
+@model AspNetScaffoldTest.RazorPages.Pages.Vehicles.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Vehicle[0].fldModelID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vehicle[0].fldTypeID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vehicle[0].fldColourID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vehicle[0].fldYear)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vehicle[0].fldOdometer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vehicle[0].fldPreviousLease)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vehicle[0].fldBookValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vehicle[0].fldAutomatic)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vehicle[0].fldAir)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vehicle[0].fldPowerLocks)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vehicle[0].fldINLot)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vehicle[0].fldINGarage)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Vehicle) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldModelID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldTypeID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldColourID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldOdometer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldPreviousLease)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldBookValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldAutomatic)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldAir)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldPowerLocks)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldINLot)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldINGarage)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.fldVIN">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.fldVIN">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.fldVIN">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

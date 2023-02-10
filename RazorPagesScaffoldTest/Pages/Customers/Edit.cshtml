@@ -1,0 +1,75 @@
+﻿@page
+@model AspNetScaffoldTest.RazorPages.Pages.Customers.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Customer</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Customer.fldCustomerID" />
+            <div class="form-group">
+                <label asp-for="Customer.fldFirstName" class="control-label"></label>
+                <input asp-for="Customer.fldFirstName" class="form-control" />
+                <span asp-validation-for="Customer.fldFirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.fldLastName" class="control-label"></label>
+                <input asp-for="Customer.fldLastName" class="form-control" />
+                <span asp-validation-for="Customer.fldLastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.fldApartment" class="control-label"></label>
+                <input asp-for="Customer.fldApartment" class="form-control" />
+                <span asp-validation-for="Customer.fldApartment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.fldAddress" class="control-label"></label>
+                <input asp-for="Customer.fldAddress" class="form-control" />
+                <span asp-validation-for="Customer.fldAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.fldCity" class="control-label"></label>
+                <input asp-for="Customer.fldCity" class="form-control" />
+                <span asp-validation-for="Customer.fldCity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.fldProvince" class="control-label"></label>
+                <input asp-for="Customer.fldProvince" class="form-control" />
+                <span asp-validation-for="Customer.fldProvince" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.fldPostalCode" class="control-label"></label>
+                <input asp-for="Customer.fldPostalCode" class="form-control" />
+                <span asp-validation-for="Customer.fldPostalCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.fldPhoneNumber" class="control-label"></label>
+                <input asp-for="Customer.fldPhoneNumber" class="form-control" />
+                <span asp-validation-for="Customer.fldPhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.fldEmail" class="control-label"></label>
+                <input asp-for="Customer.fldEmail" class="form-control" />
+                <span asp-validation-for="Customer.fldEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

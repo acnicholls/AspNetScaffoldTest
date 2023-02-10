@@ -1,0 +1,84 @@
+﻿@page
+@model AspNetScaffoldTest.RazorPages.Pages.Customers.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].fldFirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].fldLastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].fldApartment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].fldAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].fldCity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].fldProvince)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].fldPostalCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].fldPhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].fldEmail)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Customer) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldFirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldLastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldApartment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldCity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldProvince)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldPostalCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldPhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldEmail)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.fldCustomerID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.fldCustomerID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.fldCustomerID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

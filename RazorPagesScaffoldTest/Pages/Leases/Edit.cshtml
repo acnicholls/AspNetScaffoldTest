@@ -1,0 +1,95 @@
+﻿@page
+@model AspNetScaffoldTest.RazorPages.Pages.Leases.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Lease</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Lease.fldLeaseID" />
+            <div class="form-group">
+                <label asp-for="Lease.fldCustomerID" class="control-label"></label>
+                <input asp-for="Lease.fldCustomerID" class="form-control" />
+                <span asp-validation-for="Lease.fldCustomerID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lease.fldVIN" class="control-label"></label>
+                <input asp-for="Lease.fldVIN" class="form-control" />
+                <span asp-validation-for="Lease.fldVIN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lease.fldLeaseTermsID" class="control-label"></label>
+                <input asp-for="Lease.fldLeaseTermsID" class="form-control" />
+                <span asp-validation-for="Lease.fldLeaseTermsID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lease.fldBeginOdometer" class="control-label"></label>
+                <input asp-for="Lease.fldBeginOdometer" class="form-control" />
+                <span asp-validation-for="Lease.fldBeginOdometer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lease.fldContractStartDate" class="control-label"></label>
+                <input asp-for="Lease.fldContractStartDate" class="form-control" />
+                <span asp-validation-for="Lease.fldContractStartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lease.fldPaymentStartDate" class="control-label"></label>
+                <input asp-for="Lease.fldPaymentStartDate" class="form-control" />
+                <span asp-validation-for="Lease.fldPaymentStartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lease.fldMonthlyPayment" class="control-label"></label>
+                <input asp-for="Lease.fldMonthlyPayment" class="form-control" />
+                <span asp-validation-for="Lease.fldMonthlyPayment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lease.fldNumberOfPayments" class="control-label"></label>
+                <input asp-for="Lease.fldNumberOfPayments" class="form-control" />
+                <span asp-validation-for="Lease.fldNumberOfPayments" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lease.fldEndOdometer" class="control-label"></label>
+                <input asp-for="Lease.fldEndOdometer" class="form-control" />
+                <span asp-validation-for="Lease.fldEndOdometer" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Lease.fldLTRThankYou" /> @Html.DisplayNameFor(model => model.Lease.fldLTRThankYou)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Lease.fldLTRExpiry" /> @Html.DisplayNameFor(model => model.Lease.fldLTRExpiry)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Lease.fldLTRTermination" /> @Html.DisplayNameFor(model => model.Lease.fldLTRTermination)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lease.fldTerminationDate" class="control-label"></label>
+                <input asp-for="Lease.fldTerminationDate" class="form-control" />
+                <span asp-validation-for="Lease.fldTerminationDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

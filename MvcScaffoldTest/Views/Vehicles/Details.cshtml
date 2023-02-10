@@ -1,0 +1,90 @@
+﻿@model AspNetScaffoldTest.Data.Models.Vehicle
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Vehicle</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fldModelID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fldModelID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fldTypeID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fldTypeID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fldColourID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fldColourID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fldYear)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fldYear)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fldOdometer)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fldOdometer)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fldPreviousLease)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fldPreviousLease)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fldBookValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fldBookValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fldAutomatic)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fldAutomatic)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fldAir)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fldAir)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fldPowerLocks)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fldPowerLocks)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fldINLot)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fldINLot)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fldINGarage)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fldINGarage)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.fldVIN">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
