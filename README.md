@@ -1,4 +1,4 @@
-# RazorPagesScaffoldTest
+# ASP Net Scaffold Test
 
 This repo is a test of ASP.Net's scaffolding abilities.
 
