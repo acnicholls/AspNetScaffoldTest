@@ -9,3 +9,4 @@ See this link for more details: https://learn.microsoft.com/en-us/aspnet/core/da
 Both of the web applications in this repo were created within an hour using the method described at the above link.
 
 Here's a screenshot of the final working applications
+![image](https://user-images.githubusercontent.com/5872559/217980068-be313b1e-f438-49a6-8660-7aae496044fd.png)
